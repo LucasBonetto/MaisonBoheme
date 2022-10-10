@@ -13,30 +13,30 @@ body{
 
 
 .logo{
-	margin: 8% 0 0%;
+	margin: 12% 0 0%;
 	display: flex;
 	justify-content: center;
 }
 
 .logo img{
-	height: 90px;
+	height: 50px;
 }
 
 .bars{
 position: absolute;	
-top: 8%;
+top: 5%;
 left: 5%;
-fill:white;
 }
 
-.bars img{
-	height: 20px;
+.bars i{
+	font-size: 1.5em;;
+	fill:white;
 	}
 
 .fleur img{
 	position: absolute;
 	height: 200px;
-	top: 10%;
+	top: 7%;
 	right: -10px;
 }
 
@@ -51,7 +51,7 @@ fill:white;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	margin: 5%;
+	margin: 10% 5% 10%;
 }
 
 .midi, .soir, .brunch{
@@ -89,22 +89,11 @@ span{
 	background-size: cover;
 }
 
-.midi:hover{
+.midi:hover, .soir:hover, .brunch:hover{
     background-image: none;
 	background: rgb(235,82,125);
 	background: linear-gradient(160deg, rgba(235,82,125,1) 35%, rgba(234,156,178,1) 100%); 
-}
-
-.soir:hover{
-    background-image: none;
-	background: rgb(31,53,82);
-	background: linear-gradient(160deg, rgba(31,53,82,1) 35%, rgba(18,32,50,1) 100%); 
-}
-
-.brunch:hover{
-    background-image: none;
-	background: rgb(242,166,20);
-	background: linear-gradient(160deg, rgba(242,166,20,1) 35%, rgba(227,171,63,1) 100%); 
+	cursor: pointer;
 }
 
 .reserver{
@@ -120,13 +109,17 @@ span{
 	color: black;
 }
 
-.reserver:hover{
+.reserver i{
+	color:black;
+}
+
+.reserver:hover, .appel:hover{
 	background: rgb(235,82,125);
 	background: linear-gradient(160deg, rgba(235,82,125,1) 35%, rgba(234,156,178,1) 100%); 
 	font-weight: 900;
 }
 
-.contact{
+.appel{
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -139,16 +132,22 @@ span{
 	color: black;
 }
 
-.contact:hover{
-	background: rgb(242,166,20);
-	background: linear-gradient(160deg, rgba(242,166,20,1) 35%, rgba(227,171,63,1) 100%); 
-	font-weight: 900;
+.appel i{
+	color:black;
 }
 
-h1, h2{
+.separateur{
+width: 90%;
+border: 0.5px solid #fff;
+margin-left: auto;
+margin-right: auto;
+}
+
+h1{
 	font-weight: 400;
-	font-size: 20px;
-	margin: 0 5% 0;
+	font-size: 1.2em;
+	margin: 10% 5% 0;
+	text-align: center;
 }
 
 p{
@@ -157,12 +156,58 @@ p{
 	font-size: .8em;
 }
 
-.photo{
-	margin: 5% 5% 5%;
+.photos{
+	margin: 5% 5% 10%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 1fr;
+	grid-column-gap: 1%;
+	grid-row-gap: 0px; 
 }
 
-.photo img{
-	width: 100%;
-	border-radius: 10px;
+.photo-gauche img, .photo-droite img{
+width: 100%;
 }
 
+footer{
+	margin: 10% 5% 5%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 1fr;
+	grid-column-gap: 5%;
+	grid-row-gap: 0px; 
+}
+
+.ouvert h2{
+	font-weight: 400;
+	font-size: 1em;
+}
+
+.ouvert p{
+	margin:0;
+	font-size: .7em;
+	font-weight: 200;
+
+}
+
+.contacts h2{
+	font-weight: 400;
+	font-size: 1em;
+	text-align: right;
+
+}
+
+.contacts p{
+	margin:0;
+	font-size: .7em;
+	font-weight: 200;
+	text-align: right;
+}
+
+.social{
+display: flex;
+justify-content: center;
+gap: 5%;
+margin-bottom:10%;
+
+}
